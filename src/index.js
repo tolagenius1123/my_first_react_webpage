@@ -1,17 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Header from './Header';
+import Footer from './Footer';
+// import App from './App';
+// import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+
+
+function Page(){
+	return(
+		<div className='page'>
+			<Header/>
+			<div className='main-page'>
+				<h1>My First React Website</h1>
+				<ol className='myList'>
+					<li>I'm excited to learn React</li>
+					<li>I love building beautiful UI/UX</li>
+					<li>I love Front-end Technologies</li>
+				</ol>
+			</div>
+			
+			<Footer/>
+		</div>
+	)
+}
+root.render( 
+	<Page/>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
